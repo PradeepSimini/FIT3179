@@ -21,7 +21,7 @@
     },
     {"calculate": "datum.value/datum.Population", "as": "Carbon per Capita"}
   ],
-  "mark": {"type": "geoshape"},
+  "mark": {"type": "geoshape", "stroke": "rosybrown"},
   "encoding": {
     "color": {
       "field": "Carbon per Capita",
