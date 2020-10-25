@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
+  "title": "Total Carbon emissions between year 1990 to 2010",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/carbonemmissionsv2.csv"
+  },
+  "params": [
+    {
+      "name": "years",
+      "value": 2013,
+      "bind": {
+        "input": "range",
+        "min": 1990,
+        "max": 2013,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.year > years"}],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "country_or_area", "type": "nominal", "title": "Country"},
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Total Carbon Emission"
+    },
+    "color": {
+      "field": "year",
+      "type": "quantitative",
+      "scale": {"range": ["#fee0d2", "#fc9272", "#de2d26"]}
+    },
+    "tooltip": [
+      {"field": "country_or_area", "type": "nominal", "title": "Country"},
+      {"field": "year", "type": "nominal", "format": ",", "title": "Year"},
+      {
+        "field": "value",
+        "type": "quantitative",
+        "format": ",",
+        "title": "Carbon Emmision"
+      }
+    ]
+  },
+  "config": {}
+}
