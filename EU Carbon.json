@@ -1,8 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Carbon Dioxide Emmissions in Europe",
-  "width": 700,
-  "height": 700,
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/eu.geo.json",
