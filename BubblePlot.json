@@ -11,6 +11,7 @@
       "bind": "legend"
     }
   },
+  "width":"container",
   "mark": "circle",
   "encoding": {
     "opacity": {
