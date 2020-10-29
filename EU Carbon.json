@@ -45,7 +45,8 @@
       {
         "field": "Carbon per Capita",
         "type": "quantitative",
-        "title": "Emmission per Capita"
+        "title": "Emmission per Capita",
+        "format": ".2f"
       },
       {"field": "year", "type": "quantitative", "title": "Year"}
     ]
