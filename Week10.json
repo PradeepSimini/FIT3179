@@ -17,6 +17,7 @@
       }
     }
   ],
+  "width":"container",
   "transform": [{"filter": "datum.year > years"}],
   "mark": "bar",
   "encoding": {
