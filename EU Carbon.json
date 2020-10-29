@@ -6,6 +6,7 @@
     "url": "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/eu.geo.json",
     "format": {"type": "topojson", "feature": "custom"}
   },
+  "width":"container",
   "transform": [
     {
       "lookup": "properties.name",
