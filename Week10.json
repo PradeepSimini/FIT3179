@@ -1,7 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
-  "height": 400,
   "title": "Total Carbon emissions between year 1990 to 2010",
   "data": {
     "url": "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/carbonemmissionsv2.csv"
