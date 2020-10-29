@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
+  "title": "Fossil Fuel Energy Consumption Percentage",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/EnergyData.csv"
+  },
+  "selection": {
+    "continent_selection": {
+      "type": "multi",
+      "fields": ["Continent"],
+      "bind": "legend"
+    }
+  },
+  "mark": "circle",
+  "encoding": {
+    "opacity": {
+      "condition": {"selection": "continent_selection", "value": 0.6},
+      "value": 0.2
+    },
+    "x": {
+      "field": "Electric power consumption kWh 2014",
+      "type": "quantitative",
+      "title": "Electric Power Consumption"
+    },
+    "y": {
+      "field": "Fossil fuel energy consumption 2014",
+      "type": "quantitative",
+      "title": "Percentage of Energy consumption from fossil fuels"
+    },
+    "color": {"field": "Continent", "type": "nominal"},
+    "size": {
+      "field": "Population",
+      "type": "quantitative",
+      "scale": {"range": [100, 400, 700, 1000, 1300]}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {
+        "field": "Electric power consumption kWh 2014",
+        "type": "quantitative",
+        "title": "Electric power consumption",
+        "format": ","
+      },
+      {
+        "field": "Fossil fuel energy consumption 2014",
+        "type": "quantitative",
+        "title": "Fossil fuel percentage",
+        "format": ","
+      },
+      {"field": "Population", "type": "quantitative", "format": ","},
+      {"field": "Continent", "type": "nominal"}
+    ]
+  },
+  "config": {}
+}
