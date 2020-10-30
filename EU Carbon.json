@@ -47,8 +47,7 @@
         "type": "quantitative",
         "title": "Emmission per Capita",
         "format": ".4f"
-      },
-      {"field": "year", "type": "quantitative", "title": "Year"}
+      }
     ]
   },
   "config": {}
