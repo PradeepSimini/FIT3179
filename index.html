@@ -87,6 +87,12 @@
     </div>
   </div>
   
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <div id="vis4" class="vis-container"></div>
+    </div>
+  </div>
+  
 </div>
 
 <script type="text/javascript">
@@ -102,6 +108,11 @@
   
   var bubblePlot = "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/BubblePlot.json";
   vegaEmbed('#vis3', bubblePlot).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var gobalDeltaTempPlot = "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/Change%20in%20temperature.json";
+  vegaEmbed('#vis4', gobalDeltaTempPlot).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
