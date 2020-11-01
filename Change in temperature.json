@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Average Change in Land-Ocean Temperature",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/avglobaltempchange.csv"
+  },
+  "params": [
+    {
+      "name": "LowerYears",
+      "value": 1880,
+      "bind": {
+        "input": "range",
+        "min": 1880,
+        "max": 2017,
+        "step": 1,
+        "name": "Lower Year: "
+      }
+    },
+    {
+      "name": "UpperYears",
+      "value": 2019,
+      "bind": {
+        "input": "range",
+        "min": 1882,
+        "max": 2019,
+        "step": 1,
+        "name": "Upper Year: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year > LowerYears"},
+    {"filter": "datum.Year < UpperYears"}
+  ],
+  "width": "container",
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {"field": "Year", "type": "quantitative", "title": "Year"},
+    "y": {
+      "field": "Change in Land-Ocean Temperature",
+      "type": "quantitative",
+      "title": "Change in Global Temperature"
+    },
+    "tooltip": [
+      {"field": "Year", "type": "nominal"},
+      {
+        "field": "Change in Land-Ocean Temperature",
+        "type": "quantitative",
+        "title": "Change in temperature",
+        "format": ","
+      }
+    ]
+  },
+  "config": {}
+}
