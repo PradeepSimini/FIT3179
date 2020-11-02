@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Top 10 countries with the most Carbon Emissions Per Year",
+  "width": "container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/top10ce.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Carbon Emissions",
+      "type": "quantitative",
+      "title": "Kilotonnes",
+      "aggregate": "sum"
+    },
+    "y": {
+      "field": "Country",
+      "title": "Country",
+      "type": "nominal",
+      "sort": "-x"
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Carbon Emissions", "type": "quantitative"}
+    ],
+    "color": {"field": ""}
+  },
+  "config": {}
+}
