@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Global Emission types",
+  "width": "container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/PradeepSimini/FIT3179/main/greenhouse_gas.csv"
+  },
+  "mark": "area",
+  "encoding": {
+    "x": {"field": "year", "title": "Year"},
+    "y": {"aggregate": "sum", "field": "value", "title": "Kilotonnes"},
+    "color": {
+      "field": "category",
+      "scale": {"scheme": "category10"},
+      "title": "Emission Type"
+    },
+    "tooltip": [
+      {"field": "year", "type": "quantitative"},
+      {"field": "category", "type": "nominal"}
+    ]
+  },
+  "config": {}
+}
